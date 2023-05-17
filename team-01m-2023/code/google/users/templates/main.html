@@ -1,1 +1,132 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewpoint" content="width-device-width" />
+        <title>Login Page</title>
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
 
+    <body>
+        <div class="row">
+            <div class="vl"></div>
+
+            <div class="column leftp">
+                <div class="logosec">
+                    <img
+                        src="{% static 'images/logo.png' %}"
+                        alt="Logo"
+                        style="width: 65px; height: 65px" />
+                    <h1>Full Send</h1>
+                </div>
+
+                <div class="profile">
+                    <img
+                        src="{% static 'images/tri.png' %}"
+                        alt="Pointer"
+                        style="width: 50px; height: 50px" />
+                    <img
+                        src="{% static 'images/profile.png' %}"
+                        alt="Profile"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="{% url 'main'%}">Profile</a></h3>
+                </div>
+                <div class="discovery">
+                    <img
+                        src="{% static 'images/globe.png' %}"
+                        alt="Discovery"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="{% url 'discovery'%}">Discovery</a></h3>
+                </div>
+                <div class="matches">
+                    <img
+                        src="{% static 'images/matches.png' %}"
+                        alt="Matches"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="{% url 'matches'%}">Matches</a></h3>
+                </div>
+                <div class="messages">
+                    <img
+                        src="{% static 'images/msg.png' %}"
+                        alt="Messages"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="{% url 'message'%}">Messages</a></h3>
+                </div>
+                <div class="settings">
+                    <img
+                        src="{% static 'images/setting.png' %}"
+                        alt="Settings"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="{% url 'settings'%}">Settings</a></h3>
+                </div>
+                <div class="signout">
+                    <img
+                        src="{% static 'images/logout.png' %}"
+                        alt="Logout"
+                        style="width: 50px; height: 50px" />
+                    <h3><a href="/logout">Logout</a></h3>
+                </div>
+            </div>
+
+            <div class="pagetitle">
+                <h2>Profile</h2>
+            </div>
+            <div class="column rightp">
+                <form method="post" class="was-validated">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <label for="fname">Your Name</label>
+                        <input name="name" type="text" id="fname" class="form-control" placeholder="Enter Your Name" required>
+
+                        <label for="pronouns">Your Pronouns</label>
+                        <input name="pron" type="text" class="form-control" id="pronouns" placeholder="Enter Your Pronouns" required>
+
+                        <label for="subject">Your Bio</label>
+                        <textarea name="desc" class="form-control" id="subject" placeholder="Create your Bio" style="height: 55px; width: 250px;" required></textarea>
+
+                        <label for="locations">Gym Locations</label>
+                        <!-- <input name="gymLocations" type="text" id="locations" class="form-control" placeholder="Enter Locations you Climb at" required> -->
+
+                        <input type="checkbox" name="checks[]" value="Brooklyn Boulders" />Brooklyn Boulders
+                        <input type="checkbox" name="checks[]" value="Block37" />Block37
+                        <input type="checkbox" name="checks[]" value="Avondale" />Avondale
+                        <input type="checkbox" name="checks[]" value="Uptown" />Uptown
+                        <input type="checkbox" name="checks[]" value="Humboldt" />Humboldt
+                        <input type="checkbox" name="checks[]" value="Movement" />Movement
+
+                        <label for="type">Climbing Types</label>
+                        <input type="checkbox" name="checks1[]" value="Bouldering" />Bouldering
+                        <input type="checkbox" name="checks1[]" value="Top Rope" />Top Rope
+                        <input type="checkbox" name="checks1[]" value="Lead Climbing" />Lead Climbing
+
+                        <label for="level">Experience Level</label>
+                        <!-- <input name="expLevel" type="text" id="level" class="form-control" placeholder="Enter your Climbing Experience Level" required> -->
+                        {% block content %}
+                            <select name="experience" class="form-control">
+                                <option value="Beginner">Beginner</option>
+                                <option value="Intermediate">Intermediate</option>
+                                <option value="Advanced">Advanced</option>
+                                <option value="Expert">Expert</option>
+                            </select>
+                        {% endblock %}
+
+                        <label for="avail">Days Available</label>
+                        <input type="checkbox" name="checks2[]" value="Sunday" />Su
+                        <input type="checkbox" name="checks2[]" value="Monday" />M
+                        <input type="checkbox" name="checks2[]" value="Tuesday" />Tu
+                        <input type="checkbox" name="checks2[]" value="Wednesday" />W
+                        <input type="checkbox" name="checks2[]" value="Thursday" />Th
+                        <input type="checkbox" name="checks2[]" value="Friday" />F
+                        <input type="checkbox" name="checks2[]" value="Saturday" />Sa
+                        
+                        <label for="uname">Discord Username</label>
+                        <input name="username" type="text" id="uname" class="form-control" placeholder="Enter your Discord username" required>
+
+                        <input type="submit" class="btn btn-success btn-lg mt-1 m1-4" value="Submit">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

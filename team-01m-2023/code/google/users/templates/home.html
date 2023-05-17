@@ -1,0 +1,39 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewpoint" content="width-device-width" />
+        <title>Login Page</title>
+        <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column left">
+                <h1 style="color:white;margin-bottom:0;">Full Send</h1>
+                <p style="color:white;line-height: 1.6;background: none;">
+                    Our mission is to connect rock climbers from all around the world and inspire
+                    collaboration among those with compatible interests and experience.
+                </p>
+            </div>
+
+            <div class="column right">
+                <h2>Welcome to Full Send!</h2>
+                <h4 style="margin:35px 20%;">Click on the button below to sign in or sign up with an existing Google account. </h4>
+
+                {% load socialaccount %}
+                <button type="button" class="signin" style="width: 200px">
+                    <a
+                        href="{% provider_login_url 'google' %}?next={% url 'main'%}"
+                        style="color: white"
+                        >Sign In / Sign Up
+                    </a>
+                </button>
+                
+                <p style="background: none;color: var(--c-text-primary);">You will be redirected to a Google authentication page.</p>
+
+            </div>
+        </div>
+    </body>
+</html>

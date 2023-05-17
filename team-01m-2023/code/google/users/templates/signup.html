@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewpoint" content="width-device-width" />
+        <title>Login Page</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'style.css' %}" />
+    </head>
+
+    <body>
+        <div class="row">
+            <div class="column left">
+                <h1>Full Send</h1>
+                <p>
+                    Our mission is to connect rock climbers from all around the world and inspire
+                    collaboration among those with compatible interests and experience.
+                </p>
+            </div>
+
+            <div class="column right">
+                <h2>Create your account</h2>
+                <form style="text-align: center">
+                    <label for="fname">Name:</label><br />
+                    <input
+                        type="text"
+                        id="fname"
+                        name="fname"
+                        placeholder="Johnny Appleseed"
+                        style="padding: 6px 20px; width: 175px" /><br />
+                    <label for="fname">E-mail Address:</label><br />
+                    <input
+                        type="text"
+                        id="email"
+                        name="email"
+                        placeholder="johnappleseed@gmail.com"
+                        style="padding: 6px 20px; width: 175px" /><br />
+                    <label for="password">Password:</label><br />
+                    <input
+                        type="password"
+                        id="password"
+                        name="lname"
+                        placeholder="********"
+                        style="padding: 6px 20px; margin-bottom: 25px" /><br />
+                    <label for="password2">Re-enter password:</label><br />
+                    <input
+                        type="password"
+                        id="password2"
+                        name="password2"
+                        placeholder="********"
+                        style="padding: 6px 20px; margin-bottom: 25px" />
+                </form>
+
+                <button type="button" class="signin" style="width: 200px">
+                    <a href="{% url 'main'%}">Create Account</a>
+                </button>
+            </div>
+        </div>
+    </body>
+</html>
