@@ -1,1 +1,10 @@
+[Unit]
+Description=To start Django Application at boot
 
+[Service]
+Restart=on-failure
+WorkingDirectory=/home/vagrant/team-01m-2023/code/google
+ExecStart=/usr/bin/gunicorn -c dev.py -b 0.0.0.0:8000
+
+[Install]
+WantedBy=multi-user.target
