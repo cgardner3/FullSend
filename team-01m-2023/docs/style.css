@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400&family=Raleway:wght@200&display=swap');
+/*general stuff i think*/
+html, body {
+  text-align: center;
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+textarea {
+  margin-bottom: 6px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+}
+/* line dividers */
+.vl {
+  border-left: 1px solid lightgray;
+  height: 100%;
+  position: absolute;
+  left: 35%;
+}
+/*column organizers*/
+.column {
+    float: left;
+}
+.left {
+  width: 35%;
+  align-items: center;
+  background-color: black;
+  height: 100vh;
+  background-image: url('images/wall.png');
+  margin: auto;
+}
+.right {
+  width: 65%;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  height: 100vh;
+  color: black;
+}
+.leftp {
+  width: 35%;
+  align-items: left;
+  height: 100vh;
+  background-color: white;
+  margin: auto;
+  text-align: left;
+  color:black;
+}
+.rightp {
+  width: 65%;
+  height: 100vh;
+  align-items: center;
+  margin: auto;
+  padding-top: 75px;
+  background-color: rgb(240,240,240);
+  color: black;
+}
+/*logo section*/
+.logosec {
+  align-items: center;
+  background-color: rgb(240,240,240);
+  text-align: center;
+  color: black;
+  padding: 0px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+}
+.logosec h1 {
+  padding: 0 10px;
+  font-size: 60px;
+}
+/*side menu*/
+.profile, .discovery, .matches, .messages, .settings {
+  margin: auto;
+  align-items: center;
+  text-align: center;
+  display: flex;
+  padding-left: 20px;
+}
+/*page title section*/
+.pagetitle {
+  font-weight: normal;
+  align-items: center;
+  margin: auto;
+  background-color: white;
+  color: black;
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+}
+.pagetitle h2 {
+  padding: 0 10px;
+  font-size: 55px;
+}
+/*matching buttons section */
+.matchmenu {
+  font-weight: normal;
+  align-items: b;
+  margin: auto;
+  background-color: white;
+  color: black;
+  padding: 10px;
+  bottom: 0;
+
+}
+/*general attributes */
+p {
+  padding: 5px 50px;
+}
+h1 {
+padding-top: 20vh;
+font-size: 10vh;
+font-family: 'Bebas Neue', cursive;
+font-weight: normal;
+}
+h2 {
+padding-top: 20vh;
+font-size: 5vh;
+font-weight: normal;
+}
+h3 {
+padding: 0.7vh 3vh;
+font-size: 30px;
+color: black;
+font-weight: normal;
+}
+h4 {
+  font-weight: normal;
+  font-size: 20px;
+}
+button {
+  width: 125px;
+  border: 1px solid #e7e7e7;
+  height: 25px;
+  color: white;
+  margin-bottom: 5px;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+  text-align: left;
+}
+select {
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+label {
+  margin-right: 10px;
+}
+/*forms */
+form {
+  width: 60%;
+  text-align: left;
+  margin: auto;
+}
+.formpfp {
+  width: 250px;
+  margin:0;
+  padding: 0;
+}
+.formname {
+  width: 250px;
+  margin: 0;
+  padding: 0;
+}
+span {
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+}
+.mainform {
+  width: 60%;
+}
+
+.signin {
+  color: white;
+  background-color: black;
+  height: 35px;
+  border-radius: 20px;
+  font-size: 18px;
+}
+
+.leftp a {
+  color: black;
+}
+
+.left p {
+  font-size: 20px;
+}
+
+/*PASTED*/

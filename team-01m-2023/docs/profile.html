@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewpoint" content="width-device-width" />
+  <title>Login Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="row">
+
+    <div class="vl"></div>
+
+    <div class="column leftp">
+      <div class="logosec">
+        <img src="images/logo.png" alt="Logo" style="width:65px;height:65px;">
+        <h1>Full Send</h1>
+      </div>
+
+      <div class="profile">
+        <img src="images/tri.png" alt="Pointer" style="width:50px;height:50px;">
+        <img src="images/profile.png" alt="Profile" style="width:50px;height:50px;">
+        <h3><a href="profile.html">Profile</a></h3>
+      </div>
+      <div class="discovery">
+        <img src="images/globe.png" alt="Discovery" style="width:50px;height:50px;">
+        <h3><a href="discovery.html">Discovery</a></h3>
+      </div>
+      <div class="matches">
+        <img src="images/matches.png" alt="Matches" style="width:50px;height:50px;">
+        <h3><a href="matches.html">Matches</a></h3>
+      </div>
+      <div class="messages">
+        <img src="images/msg.png" alt="Messages" style="width:50px;height:50px;">
+        <h3><a href="messages.html">Messages</a></h3>
+      </div>
+      <div class="settings">
+        <img src="images/setting.png" alt="Settings" style="width:50px;height:50px;">
+        <h3><a href="settings.html">Settings</a></h3>
+      </div>
+
+    </div>
+
+    <div class="pagetitle">
+      <h2>Profile</h2>
+    </div>
+    <div class="column rightp">
+      <!--top form-->
+      <span>
+        <form class="formpfp" style="float:left;">
+          <input type="file" accept="image/jpeg, image/png" onchange="loadFile(event)" name="pfp" id="file"
+            style="display: none;" />
+          <label for="file" style="cursor: pointer;">Upload Image</label><br>
+          <img id="output" width="200px" height="200px" />
+          <script>
+            var loadFile = function (event) {
+              var pfp = document.getElementById('output');
+              pfp.src = URL.createObjectURL(event.target.files[0]);
+            };
+          </script>
+        </form>
+        <form class="formname" style="float:right;">
+          <textarea id="name" name="name" rows="1" cols="29" placeholder="Name"></textarea>
+          <textarea id="pron" name="pron" rows="1" cols="29" placeholder="Pronouns"></textarea>
+          <textarea id="desc" name="desc" rows="6" cols="29" placeholder="Description"></textarea>
+        </form>
+      </span>
+      
+      <!--bottom form-->
+      <form class="mainform">
+        <button type="button" class="myprofile" style="background-color: darkgray;">My Profile</button>
+        <button type="button" class="preferences"
+          style="width:200px;color: darkgray;background-color: white;margin:20px 0">Profile I'm Looking For</button><br>
+        <label for="gyms">Rock climbing gyms:</label>
+        <input type="checkbox" id="brooklyn" name="brooklyn" value="brooklyn">
+        <label for="brooklyn" style="font-size:14px;">Brooklyn Boulders</label>
+        <input type="checkbox" id="block37" name="block37" value="block37">
+        <label for="block37" style="font-size:14px;">Block37</label>
+        <input type="checkbox" id="avondale" name="avondale" value="avondale">
+        <label for="avondale" style="font-size:14px;">Avondale</label>
+        <input type="checkbox" id="uptown" name="uptown" value="uptown">
+        <label for="uptown" style="font-size:14px;">Uptown</label>
+        <input type="checkbox" id="humboldt" name="humboldt" value="humboldt">
+        <label for="humboldt" style="font-size:14px;">Humboldt </label>
+        <input type="checkbox" id="movement" name="movement" value="movement">
+        <label for="movement" style="font-size:14px;">Movement</label> <br>
+        
+        <label for="types">Types of climbing:</label>
+        <input type="checkbox" id="bouldering" name="bouldering" value="bouldering" style="margin:0;padding:0;">
+        <label for="bouldering" style="font-size:14px;">Bouldering</label>
+        <input type="checkbox" id="toprope" name="toprope" value="toprope">
+        <label for="toprope" style="font-size:14px;">Top Rope</label>
+        <input type="checkbox" id="leadclimbing" name="leadclimbing" value="leadclimbing">
+        <label for="leadclimbing" style="font-size:14px;">Lead Climbing</label><br>
+        
+        <label for="level">Experience level:</label>
+        <select name="levels" id="levels">
+          <option value="beginner">Beginner</option>
+          <option value="intermediate">Intermediate</option>
+          <option value="expert">Expert</option>
+          <option value="competitive">Competitive</option>
+          
+        </select><br>
+        <label for="avail">Availability:</label>
+        <button type="button" class="s"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;margin-bottom:20px;">S</button>
+        <button type="button" class="m"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">M</button>
+        <button type="button" class="t"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">T</button>
+        <button type="button" class="w"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">W</button>
+        <button type="button" class="r"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">R</button>
+        <button type="button" class="f"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">F</button>
+        <button type="button" class="s"
+          style="background-color: white;color:gray;border-radius:50%;width:25px;">S</button> <br>
+        <label for="skills">Skills:</label>
+        <input type="text" id="skills" name="skills"><br>
+      </form>
+      <p></p>
+
+
+    </div>
+
+  </div>
+</body>
+
+</html>
